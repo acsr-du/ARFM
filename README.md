@@ -30,12 +30,18 @@ cd /var/malwareDetectorV0.1/
 pip install -r requirements.txt
 ```
 
+- Take full permission to make folder completely accessible
+
+```
+sudo chown -R (pc-name) /var/malwareDetectorV0.1
+```
+
 - Check Streamlit Is Working.
   
-  ```
-  streamlit hello 
-  ```
-  A streamlit web interface should load up which is hosted locally. To close the interface, use Ctrl+C in the terminal.
+```
+streamlit hello 
+```
+A streamlit web interface should load up which is hosted locally. To close the interface, use Ctrl+C in the terminal.
 
 ## Usage guide
 
