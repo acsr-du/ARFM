@@ -1,19 +1,18 @@
 # MalwareDetector
 
-In this new era of on-demand virtual computing, security is of utmost importance. Recently, various security incidents have been reported by companies in the virtualization servers which raises a strong security concern towards designing the virtualization specific security frameworks. Traditional malware analysis techniques and detection methods are insufficient in detecting and analyzing the rapidly growing malware.
+In the dynamic realm of virtual computing, security is paramount. Recent incidents in virtualization servers emphasize the need for advanced security frameworks. Conventional malware analysis falls short, prompting the proposal of a Xen-based Windows malware framework for resilient defense.
 
-A windows malware analysis framework is proposed in Xen-based architecture to address the recent cyber-attacks on crucial virtualized ecosystems. The framework has been implemented successfully using recent windows malware dataset (executables) collected from online sources. 
-
-A test bed set up has been created in the lab to perform malicious process injection and memory tracing using kernel debugging based introspection mechanism.The logs are pre-processed and analysed. We have primarily considered process control related syscall operations and dlls invocations during extracting features at the hypervisor which are further analysed using machine learning algorithms. The approach provides the promising results.
+This framework, implemented successfully with a recent dataset, incorporates a lab test bed for executing malicious processes and kernel-level memory tracing. Meticulous pre-processing and analysis of logs, emphasizing hypervisor-level syscall operations and DLL invocations, provide a robust foundation for subsequent machine learning algorithms, yielding promising results.
 
 ## Analysis setup
 
-Memory introspection is used to track all process activity occurring at the kernel level while they are executing inside the compromised VM. An out-VM monitoring method is needed to monitor the system-level runtime state of the VM from the outside in order to combat sophisticated malware. Open source tools, which track the heap allocations and internal kernel operations, intercept Xen events, and map guest memory to host memory, have been used to keep the security system's stealthiness. When an event occurs, the currently running process undergoes scanning for loaded libraries. The process activity tracing commences its operation once the malware analysis tools are deployed on bare-metal machines, as elaborated in the following section. You can find instructions on how to set up these prerequisites by referring to the following [link](https://github.com/acsr-du/analysisEnvironmentV0.1.git).
+Memory introspection tracks process activities at the kernel level within the compromised VM. An out-VM monitoring method enables system-level runtime state monitoring externally. Open-source tools intercept Xen events, map guest memory to host memory, maintaining security system stealthiness. Event-driven scanning focuses on loaded libraries within the running process. Deployment on bare-metal machines initiates process activity tracing. Setup instructions here. [link](https://github.com/acsr-du/analysisEnvironmentV0.1.git).
 
 ## Preprocessing of generated logs
 
-Significant features are extracted from the unstructured raw logs. The system call is regarded as a crucial attribute throughout the entire process execution tracing log. The combination of both syscall and DLL makes the proposed methodology distinctive.The structured, pre-processed dataset is subsequently subjected to further cleaning and standardization, preparing it for the learning and testing phases.
+A critical phase involves extracting significant features from unstructured raw logs. System calls emerge as pivotal attributes throughout the entire process execution tracing log. The distinctiveness of the proposed methodology lies in combining both syscall and DLL information. The resultant structured and pre-processed dataset undergoes further cleaning and standardization, preparing it for subsequent learning and testing phases.
 
 ## Behaviour analysis
-The proposed framework employs a Random Forest (RF) as a classifier for malware detection. The RF algorithm is a supervised ensemble learning technique. During the training phase, RF constructs multiple decision trees using bagging techniques, where each tree is built from a random sample. 
+
+The chosen framework adopts a Random Forest (RF) as a classifier for malware detection. RF, a supervised ensemble learning technique, constructs multiple decision trees during the training phase. Bagging techniques are employed, with each tree built from a random sample. This approach enhances the model's robustness and effectiveness in discerning malicious patterns within the analyzed dataset.
 
