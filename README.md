@@ -27,7 +27,7 @@ cd /var/
 git clone https://github.com/acsr-du/malwareDetectorV0.1.git
 exit
 cd /var/malwareDetectorV0.1/
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 - Check Streamlit Is Working.
