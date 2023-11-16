@@ -122,7 +122,7 @@ with col1:
     #st.write(f"**Based on your selected classifier.**")
 with col2:
     # path of json file of animated icon
-    result_anim = load_lottiefile("/var/LearnStreamlit/assets/results.json")
+    result_anim = load_lottiefile("/var/malwareDetectorV0.1/src/assets/results.json")
     st_lottie(
         result_anim,
         speed=0.8,
@@ -135,8 +135,8 @@ with col2:
     )
 
 
-df_1 = pd.read_csv("/var/LearnStreamlit/ml/GUI_dll.csv" )
-df_2 = pd.read_csv("/var/LearnStreamlit/ml/GUI_system_call.csv" )
+df_1 = pd.read_csv("/var/malwareDetectorV0.1/src/ml/GUI_dll.csv" )
+df_2 = pd.read_csv("/var/malwareDetectorV0.1/src/ml/GUI_system_call.csv" )
 
 df_2['malwares'] = df_2['malwares'].str.replace(r'\d+', '')
 df_1 = df_1.drop(['malwares'], axis = 1)
@@ -153,8 +153,8 @@ X_train, X_test, y_train, y_test = train_test_split(df.iloc[:, 0:-1], df.iloc[:,
 testing_dataset = pd.concat([X_test, y_test], axis = 1)
 training_dataset = pd.concat([X_train, y_train], axis = 1)
 
-testing_dataset.to_csv("/var/LearnStreamlit/uploaded/testing_dataset.csv", index = False)
-training_dataset.to_csv("/var/LearnStreamlit/ml/training_dataset.csv", index =   False)
+testing_dataset.to_csv("/var/malwareDetectorV0.1/src/uploaded/testing_dataset.csv", index = False)
+training_dataset.to_csv("/var/malwareDetectorV0.1/src/ml/training_dataset.csv", index =   False)
 
 # y_test
 
