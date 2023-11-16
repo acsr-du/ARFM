@@ -40,4 +40,4 @@ def local_css(file):
 st.header(":mailbox: Get In Touch With Us!")
 st.markdown(contact_form, unsafe_allow_html=True)
 
-local_css("/var/LearnStreamlit/assets/style.css")
+local_css("/var/malwareDetectorV0.1/src/assets/style.css")
