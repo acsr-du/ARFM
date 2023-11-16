@@ -83,7 +83,7 @@ def navigate_to_page(page_name):
 
 
 def plot_graph():
-    df = pd.read_csv("/assets/data.csv")
+    df = pd.read_csv("/var/malwareDetectorV0.1/src/assets/data.csv")
     df.set_index('Family', inplace=True)
     # Plot the data as a line chart using st.line_chart
     chart = st.line_chart(df['Samples'])
@@ -119,7 +119,7 @@ def main():
         st.divider()
 
         st.subheader(":1234: Version ***(Beta)***")
-        st.code("0.0.1")
+        st.code("0.1")
     #-------------------------upload-button------------------------------
 
     server_folder_path = "/var/malwareDetectorV0.1/src/uploaded"  # Replace with the desired folder path
