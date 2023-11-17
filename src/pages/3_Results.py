@@ -80,7 +80,6 @@ def read_first_5_lines(file_path):
 # ---------------------------sidebar-----------------------------
 with st.sidebar:
 
-    st.divider()
     st.subheader(":1234: Version ***(Beta)***")
     st.code("0.1")
 
