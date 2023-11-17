@@ -118,6 +118,11 @@ def main():
 
         st.divider()
 
+        if st.button('Clear cache', key='clear_cache', type="primary", use_container_width=True):
+                cacheClear()
+
+        st.divider()
+
         st.subheader(":1234: Version ***(Beta)***")
         st.code("0.1")
     #-------------------------upload-button------------------------------
