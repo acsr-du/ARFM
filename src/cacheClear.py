@@ -17,7 +17,7 @@ def cacheClear():
             clear_folder(folder_path)
 
     folders_to_clear = [
-        # Add more folder paths here
+        "/var/ARFM/src/uploaded"
     ]
 
     clear_multiple_folders(folders_to_clear)
