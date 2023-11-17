@@ -66,3 +66,7 @@ cd /var/ARFM/
 ```
 streamlit run src/Home.py
 ```
+
+## User Guide
+
+To use this web app, please refer to this [repository's wiki documentation](link_to_wiki_docs).
