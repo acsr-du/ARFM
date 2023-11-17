@@ -26,7 +26,7 @@ The chosen framework adopts a Random Forest (RF) as a classifier for malware det
 
 **Sample of Logs and required csv - [link](https://github.com/acsr-du/ARFM/tree/ae99451f5783783a254526c33578105bde77a11a/sample)**
 
-### Installation
+### Installation on a local machine
 
 - Clone the repository to your local machine
   
