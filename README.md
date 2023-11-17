@@ -26,7 +26,7 @@ The chosen framework adopts a Random Forest (RF) as a classifier for malware det
 
 **Sample of Logs and required csv - [link](https://github.com/acsr-du/ARFM/tree/ae99451f5783783a254526c33578105bde77a11a/sample)**
 
-### Installation on a local machine
+## Installation on a local machine
 
 - Clone the repository to your local machine
   
@@ -53,7 +53,7 @@ streamlit hello
 ```
 A streamlit web interface should load up which is hosted locally. To close the interface, use Ctrl+C in the terminal.
 
-## Initialize ARFM web-app
+### Initialize ARFM web-app
 
 - Change terminal working directory to ARFM
 
