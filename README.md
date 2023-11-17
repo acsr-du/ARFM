@@ -4,6 +4,8 @@ In the dynamic realm of virtual computing, security is paramount. Recent inciden
 
 This framework, implemented successfully with a recent dataset, incorporates a lab test bed for executing malicious processes and kernel-level memory tracing. Meticulous pre-processing and analysis of logs, emphasizing hypervisor-level syscall operations and DLL invocations, provide a robust foundation for subsequent machine learning algorithms, yielding promising results.
 
+The proposed framework is able to achieve an accuracy of 95.80% with F1-score of 95.48 for random forest classifier. The proposed framework is validated on the four malware families including vobfus, adload, agent, obfuscator and one benign family.
+
 ### Analysis setup
 
 Memory introspection tracks process activities at the kernel level within the compromised VM. An out-VM monitoring method enables system-level runtime state monitoring externally. Open-source tools intercept Xen events, map guest memory to host memory, maintaining security system stealthiness. Event-driven scanning focuses on loaded libraries within the running process. Deployment on bare-metal machines initiates process activity tracing.
@@ -70,3 +72,12 @@ streamlit run src/Home.py
 ## User Guide
 
 To use this web app, please refer to this [repository's wiki documentation](https://github.com/acsr-du/ARFM/wiki).
+
+## Limitation with other state of the art
+The proposed framework is validated using latest malware execytable having a coverage till 2023 unlike other state of art which uses older dataset to validate the malware detection model. Moreover, various state of the art use agent based mechanism for introspection, while the proposed framework uses agentless based mechanism.
+
+## Team Members
+Mentor: Dr.Preeti Mishra, Assistant Professor, School of Technology, Doon University, Dehradun
+Mentees: Avantika Gaur, Mohit Bhatt, Saksham Badoni, Arjun Bisht, School of Technology, Doon University, Dehradun 
+
+
