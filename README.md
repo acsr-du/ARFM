@@ -53,7 +53,7 @@ streamlit hello
 ```
 A streamlit web interface should load up which is hosted locally. To close the interface, use Ctrl+C in the terminal.
 
-## Usage guide
+## Initialize malwareDetectorV0.1 web-app
 
 - Change terminal working directory to malwareDetectorV0.1
 
