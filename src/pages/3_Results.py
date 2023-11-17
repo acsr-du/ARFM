@@ -8,7 +8,7 @@ import os
 import subprocess
 import time
 
-from cacheClear import cacheClear
+
 import shutil
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
