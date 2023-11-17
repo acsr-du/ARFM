@@ -79,13 +79,10 @@ def read_first_5_lines(file_path):
 
 # ---------------------------sidebar-----------------------------
 with st.sidebar:
-        
-    if st.button('Clear cache', key='clear_cache', type="primary", use_container_width=True):
-        cacheClear()
 
     st.divider()
     st.subheader(":1234: Version ***(Beta)***")
-    st.code("0.0.1")
+    st.code("0.1")
 
 # ---------------------------------------------------------------- 
 
