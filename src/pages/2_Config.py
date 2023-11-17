@@ -113,7 +113,7 @@ with col1:
         st.subheader(":page_facing_up: Files Uploaded for Analysis")
 
         # Replace 'your_folder_path' with the path to the folder on your desktop
-        folder_path = "/var/malwareDetectorV0.1/src/uploaded"
+        folder_path = "/var/ARFM/src/uploaded"
 
         if not os.path.exists(folder_path):
                 st.error("Folder not found. Please provide a valid folder path.")
@@ -153,7 +153,7 @@ with col2:
 
         st.subheader(":wrench: Analyze CSV")
 
-        folder_path = "/var/malwareDetectorV0.1/src/uploaded"
+        folder_path = "/var/ARFM/src/uploaded"
         is_empty = not os.listdir(folder_path)
 
         if is_empty:
