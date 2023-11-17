@@ -78,6 +78,7 @@ The proposed framework is validated using latest malware execytable having a cov
 
 ## Team Members
 Mentor: Dr.Preeti Mishra, Assistant Professor, School of Technology, Doon University, Dehradun
+
 Mentees: Avantika Gaur, Mohit Bhatt, Saksham Badoni, Arjun Bisht, School of Technology, Doon University, Dehradun 
 
 
