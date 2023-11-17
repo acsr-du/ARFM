@@ -69,4 +69,4 @@ streamlit run src/Home.py
 
 ## User Guide
 
-To use this web app, please refer to this [repository's wiki documentation](https://github.com/acsr-du/ARFM.wiki.git).
+To use this web app, please refer to this [repository's wiki documentation](https://github.com/acsr-du/ARFM/wiki).
