@@ -7,7 +7,7 @@ import pandas as pd
 import os
 import subprocess
 import time
-# from folder_copy import copy_and_rename_folder
+
 from cacheClear import cacheClear
 import shutil
 import matplotlib.pyplot as plt
@@ -39,22 +39,6 @@ import numpy as np
 # ----------------------------------------------------------
 
 # ---------------------custom modes-------------------------
-
-
-# Define the base folder for storing the output binaries on the Desktop
-output_base_folder = os.path.expanduser("~/Desktop/MalwareScannerActions")
-
-# Define the subfolders for Skip, Remove, and Quarantine
-output_skip_folder = os.path.join(output_base_folder, "Skip")
-output_remove_folder = os.path.join(output_base_folder, "Remove")
-output_quarantine_folder = os.path.join(output_base_folder, "Quarantine")
-
-# Ensure the output folders exist, or create them if they don't
-os.makedirs(output_skip_folder, exist_ok=True)
-os.makedirs(output_remove_folder, exist_ok=True)
-os.makedirs(output_quarantine_folder, exist_ok=True)
-# Dictionary to track the state of each item (Skip, Remove, Quarantine)
-item_states = {}
 
 st.set_page_config(layout="wide", page_title="Results", page_icon="📊")
 
@@ -96,10 +80,6 @@ def read_first_5_lines(file_path):
 # ---------------------------sidebar-----------------------------
 with st.sidebar:
         
-    # st.title("📄More Pages:")
-    # st.markdown(pages, unsafe_allow_html=True) #pages
-    # st.divider()
-    # st.subheader("Clear cache")
     if st.button('Clear cache', key='clear_cache', type="primary", use_container_width=True):
         cacheClear()
 
@@ -118,11 +98,9 @@ col1, col2 = st.columns([2,1])
 
 with col1:
     st.subheader("Samples Identification:")
-    # st.write("***Expand to see detailed report of specific malware.")
-    #st.write(f"**Based on your selected classifier.**")
+   
 with col2:
-    # path of json file of animated icon
-    result_anim = load_lottiefile("/var/malwareDetectorV0.1/src/assets/results.json")
+    result_anim = load_lottiefile("/var/ARFM/src/assets/results.json")
     st_lottie(
         result_anim,
         speed=0.8,
@@ -135,8 +113,8 @@ with col2:
     )
 
 
-df_1 = pd.read_csv("/var/malwareDetectorV0.1/src/ml/GUI_dll.csv" )
-df_2 = pd.read_csv("/var/malwareDetectorV0.1/src/ml/GUI_system_call.csv" )
+df_1 = pd.read_csv("/var/ARFM/src/ml/GUI_dll.csv" )
+df_2 = pd.read_csv("/var/ARFM/src/ml/GUI_system_call.csv" )
 
 df_2['malwares'] = df_2['malwares'].str.replace(r'\d+', '')
 df_1 = df_1.drop(['malwares'], axis = 1)
@@ -153,8 +131,8 @@ X_train, X_test, y_train, y_test = train_test_split(df.iloc[:, 0:-1], df.iloc[:,
 testing_dataset = pd.concat([X_test, y_test], axis = 1)
 training_dataset = pd.concat([X_train, y_train], axis = 1)
 
-testing_dataset.to_csv("/var/malwareDetectorV0.1/src/uploaded/testing_dataset.csv", index = False)
-training_dataset.to_csv("/var/malwareDetectorV0.1/src/ml/training_dataset.csv", index =   False)
+testing_dataset.to_csv("/var/ARFM/src/uploaded/testing_dataset.csv", index = False)
+training_dataset.to_csv("/var/ARFM/src/ml/training_dataset.csv", index =   False)
 
 # y_test
 
