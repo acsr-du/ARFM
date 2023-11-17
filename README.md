@@ -24,7 +24,7 @@ The chosen framework adopts a Random Forest (RF) as a classifier for malware det
 
 *Note - Current framework has been implemented considered using the dataset genrated in our lab [four malware, one benign]. In presently, we have considered four malware families due to time and resource constraints. However, the proposed framework can be scalable.*
 
-**Sample of Logs and csv - [link](https://github.com/acsr-du/malwareDetectorV0.1/tree/ae99451f5783783a254526c33578105bde77a11a/sample)**
+**Sample of Logs and required csv - [link](https://github.com/acsr-du/malwareDetectorV0.1/tree/ae99451f5783783a254526c33578105bde77a11a/sample)**
 
 ### Installation
 
