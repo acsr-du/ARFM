@@ -8,6 +8,7 @@ import os
 from PIL import Image
 from streamlit_extras.switch_page_button import switch_page
 import psutil
+from cacheClear import cacheClear
 # ---------------------custom modes-------------------------
 
 
