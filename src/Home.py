@@ -83,7 +83,7 @@ def navigate_to_page(page_name):
 
 
 def plot_graph():
-    df = pd.read_csv("/var/malwareDetectorV0.1/src/assets/data.csv")
+    df = pd.read_csv("/var/ARFM/src/assets/data.csv")
     df.set_index('Family', inplace=True)
     # Plot the data as a line chart using st.line_chart
     chart = st.line_chart(df['Samples'])
@@ -92,13 +92,13 @@ def plot_graph():
 
 def display_dataframe():
     # Display the DataFrame using st.dataframe
-    df = pd.read_csv("/var/malwareDetectorV0.1/src/assets/data.csv")
+    df = pd.read_csv("/var/ARFM/src/assets/data.csv")
     st.table(df)
     # st.write('Malware Samples Data')
 
 def download_data():
     # Provide a link to download the DataFrame as a CSV file
-    df = pd.read_csv("/var/malwareDetectorV0.1/src/assets/data.csv")
+    df = pd.read_csv("/var/ARFM/src/assets/data.csv")
     csv = df.to_csv(index=False)
     st.download_button("Download CSV", data=csv, file_name='malware_data.csv', mime='text/csv')
     # st.write('Download the Malware Samples Data as CSV.')
@@ -107,7 +107,7 @@ def main():
 
     st.title("")
     # -------------------Porject-Banner--------------------
-    image = Image.open('/var/malwareDetectorV0.1/src/images/b1.png')
+    image = Image.open('/var/ARFM/src/images/b1.png')
     st.image(image) 
     st.divider()
 
@@ -122,7 +122,7 @@ def main():
         st.code("0.1")
     #-------------------------upload-button------------------------------
 
-    server_folder_path = "/var/malwareDetectorV0.1/src/uploaded"  # Replace with the desired folder path
+    server_folder_path = "/var/ARFM/src/uploaded"  # Replace with the desired folder path
 
     uploaded_files = st.file_uploader("Upload CSV File", type=["csv"])
 
@@ -131,7 +131,6 @@ def main():
         # Save the uploaded CSV file to the server folder
         os.makedirs(server_folder_path, exist_ok=True)
         copy_uploaded_files([uploaded_files], server_folder_path)
-        # copy_uploaded_files([uploaded_files], "/var/malwareDetectorV0.1/src/analysis/preprocessing/csv")
         switch_page("config")
 
 
