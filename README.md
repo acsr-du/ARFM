@@ -55,3 +55,14 @@ A streamlit web interface should load up which is hosted locally. To close the i
 
 ## Usage guide
 
+- Change terminal working directory to malwareDetectorV0.1
+
+```
+cd /var/malwareDetectorV0.1/
+```
+
+- Initialize the web-app
+
+```
+streamlit run src/Home.py
+```
