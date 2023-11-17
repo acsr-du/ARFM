@@ -14,7 +14,11 @@ A critical phase involves extracting significant features from unstructured raw 
 
 ### Behaviour analysis
 
-The chosen framework adopts a Random Forest (RF) as a classifier for malware detection. RF, a supervised ensemble learning technique, constructs multiple decision trees during the training phase. Bagging techniques are employed, with each tree built from a random sample. This approach enhances the model's robustness and effectiveness in discerning malicious patterns within the analyzed dataset.
+The chosen framework adopts a Random Forest (RF) as a classifier for malware detection. RF, a supervised ensemble learning technique, constructs multiple decision trees during the training phase. Bagging techniques are employed, with each tree built from a random sample. This approach enhances the model's robustness and effectiveness in discerning malicious patterns within the analyzed dataset. Classifier program - link[]
+
+*Note - In presently, we have considered four malware families due to time and resource constraints. However, the proposed framework can be scalable.*
+
+Sample of Logs and csv - link[]
 
 ### Installation
 
